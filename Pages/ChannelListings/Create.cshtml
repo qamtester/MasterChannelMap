@@ -1,0 +1,49 @@
+﻿@page
+@model MasterChannelMap.Pages.ChannelListings.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ChannelListing</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ChannelListing.ChannelMapName" class="control-label"></label>
+                <input asp-for="ChannelListing.ChannelMapName" class="form-control" />
+                <span asp-validation-for="ChannelListing.ChannelMapName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChannelListing.TunerPosition" class="control-label"></label>
+                <input asp-for="ChannelListing.TunerPosition" class="form-control" />
+                <span asp-validation-for="ChannelListing.TunerPosition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChannelListing.CallSignID" class="control-label"></label>
+                <input asp-for="ChannelListing.CallSignID" class="form-control" />
+                <span asp-validation-for="ChannelListing.CallSignID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChannelListing.ServiceCollectionID" class="control-label"></label>
+                <input asp-for="ChannelListing.ServiceCollectionID" class="form-control" />
+                <span asp-validation-for="ChannelListing.ServiceCollectionID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

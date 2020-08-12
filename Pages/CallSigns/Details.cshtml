@@ -1,0 +1,43 @@
+﻿@page
+@model MasterChannelMap.Pages.CallSigns.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CallSign</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CallSign.CallLetters)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CallSign.CallLetters)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CallSign.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CallSign.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CallSign.ChannelListingID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CallSign.ChannelListingID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CallSign.Notes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CallSign.Notes)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.CallSign.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

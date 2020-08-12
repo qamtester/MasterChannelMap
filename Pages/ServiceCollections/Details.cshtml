@@ -1,0 +1,25 @@
+﻿@page
+@model MasterChannelMap.Pages.ServiceCollections.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ServiceCollection</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ServiceCollection.ServiceCollectionName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ServiceCollection.ServiceCollectionName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ServiceCollection.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

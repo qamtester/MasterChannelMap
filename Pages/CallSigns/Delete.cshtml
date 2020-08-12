@@ -1,0 +1,46 @@
+﻿@page
+@model MasterChannelMap.Pages.CallSigns.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CallSign</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CallSign.CallLetters)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CallSign.CallLetters)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CallSign.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CallSign.Description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CallSign.ChannelListingID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CallSign.ChannelListingID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CallSign.Notes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CallSign.Notes)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="CallSign.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

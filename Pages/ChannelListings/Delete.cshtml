@@ -1,0 +1,46 @@
+﻿@page
+@model MasterChannelMap.Pages.ChannelListings.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ChannelListing</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChannelListing.ChannelMapName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChannelListing.ChannelMapName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChannelListing.TunerPosition)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChannelListing.TunerPosition)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChannelListing.CallSignID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChannelListing.CallSignID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ChannelListing.ServiceCollectionID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ChannelListing.ServiceCollectionID)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="ChannelListing.ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
